@@ -70,11 +70,11 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
      * `-----------------------------------------------------------'
      */
     [31] = 
-    KEYMAP_JP(TRNS,FN1 ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,\
-              TRNS  ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,        \
-              TRNS   ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  \
-              TRNS    ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
-              TRNS,TRNS,TRNS,TRNS,TRNS,    TRNS    ,TRNS,TRNS,TRNS,TRNS ,TRNS,TRNS,TRNS),    
+    KEYMAP_JP(NO  ,FN1 ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,\
+              NO    ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,        \
+              NO     ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,  \
+              NO      ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  , \
+              NO  ,TRNS,NO  ,NO  ,NO  ,    NO      ,NO  ,NO  ,NO  ,NO   ,NO  ,NO  ,NO  ),    
 };
 
 
