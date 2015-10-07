@@ -11,9 +11,9 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
 #endif
     /* Layer 0: Default Layer */
     [0] =
-    KEYMAP_JP(ESC ,1   ,2   ,3   ,4   ,5   ,6   ,7   ,8   ,9   ,0   ,MINS,EQL ,BSLS,BSPC, \
+    KEYMAP_JP(ESC ,1   ,2   ,3   ,4   ,5   ,6   ,7   ,8   ,9   ,0   ,MINS,EQL ,GRV ,BSPC, \
               TAB   ,Q   ,W   ,E   ,R   ,T   ,Y   ,U   ,I   ,O   ,P   ,LBRC,RBRC,         \
-              LCTL   ,A   ,S   ,D   ,F   ,G   ,H   ,J   ,K   ,L   ,SCLN,QUOT,GRV ,ENT, \
+              LCTL   ,A   ,S   ,D   ,F   ,G   ,H   ,J   ,K   ,L   ,SCLN,QUOT,BSLS,ENT, \
               LSFT    ,Z   ,X   ,C   ,V   ,B   ,N   ,M   ,COMM,DOT ,SLSH,RO  ,UP  ,RSFT, \
               FN0 ,FN31,LGUI,LALT,MHEN,    SPC     ,HENK,KANA,RALT,FN0 , LEFT,DOWN,RGHT),
 
@@ -56,9 +56,28 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
               TRNS   ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,WH_U,BTN3,TRNS,  \
               TRNS    ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,BTN1,WH_D,MS_U,BTN2, \
               TRNS,TRNS,TRNS,TRNS,TRNS,    TRNS    ,TRNS,TRNS,TRNS,TRNS ,MS_L,MS_D,MS_R),    
+    /* Layer 3: Extra Modifiers
+     * ,-----------------------------------------------------------.
+     * |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+     * |-----------------------------------------------------------|
+     * |     |   |   |   |   |   |   |   |   |   |   |   |   |     |
+     * |------------------------------------------------------`    |
+     * |      |   |   |   |   |   |   |   |   |   |   |   |   |    |
+     * |-----------------------------------------------------------|
+     * |       |   |   |   |   |   |   |   |   |   |   |   |   |   |
+     * |-----------------------------------------------------------|
+     * |   ||   |   |   |FN3|         |FN4|FN5|   |   ||   |   |   |
+     * `-----------------------------------------------------------'
+     */
+    [3] = 
+    KEYMAP_JP(TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,\
+              TRNS  ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,        \
+              TRNS   ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  \
+              TRNS    ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
+              TRNS,TRNS,TRNS,TRNS,FN3 ,    TRNS    ,FN4 ,FN5 ,TRNS,TRNS ,TRNS,TRNS,TRNS),    
     /* Layer 31: Function selecting mode
      * ,-----------------------------------------------------------.
-     * |   | MK|   |   |   |   |   |   |   |   |   |   |   |   |   |
+     * |   | MK| DK|   |   |   |   |   |   |   |   |   |   |   |   |
      * |-----------------------------------------------------------|
      * |     |   |   |   |   |   |   |   |   |   |   |   |   |     |
      * |------------------------------------------------------`    |
@@ -70,7 +89,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
      * `-----------------------------------------------------------'
      */
     [31] = 
-    KEYMAP_JP(NO  ,FN1 ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,\
+    KEYMAP_JP(NO  ,FN1 ,FN2 ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,\
               NO    ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,        \
               NO     ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,  \
               NO      ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  , \
@@ -89,5 +108,9 @@ const uint16_t fn_actions[] PROGMEM = {
 #endif
     [0] = ACTION_LAYER_MOMENTARY(1),
     [1] = ACTION_LAYER_INVERT(2, ON_PRESS),
+    [2] = ACTION_LAYER_INVERT(3, ON_PRESS),
+    [3] = ACTION_NO,
+    [4] = ACTION_NO,
+    [5] = ACTION_NO,
     [31] = ACTION_LAYER_MOMENTARY(31),
 };
