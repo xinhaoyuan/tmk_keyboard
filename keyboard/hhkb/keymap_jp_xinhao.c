@@ -1,5 +1,8 @@
 /* 
  * HHKB JP Layout
+ *
+ * make -f Makefile.jp KEYMAP=jp_xinhao, then flush hhkb_lufa.hex
+ *
  */
 #include "keymap_common.h"
 
@@ -14,7 +17,7 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
     KEYMAP_JP(ESC ,1   ,2   ,3   ,4   ,5   ,6   ,7   ,8   ,9   ,0   ,MINS,EQL ,GRV ,BSPC, \
               TAB   ,Q   ,W   ,E   ,R   ,T   ,Y   ,U   ,I   ,O   ,P   ,LBRC,RBRC,         \
               LCTL   ,A   ,S   ,D   ,F   ,G   ,H   ,J   ,K   ,L   ,SCLN,QUOT,BSLS,ENT, \
-              LSFT    ,Z   ,X   ,C   ,V   ,B   ,N   ,M   ,COMM,DOT ,SLSH,RO  ,UP  ,RSFT, \
+              LSFT    ,Z   ,X   ,C   ,V   ,B   ,N   ,M   ,COMM,DOT ,SLSH,RSFT,UP  ,RSFT, \
               FN0 ,FN31,LGUI,LALT,MHEN,    SPC     ,HENK,KANA,RALT,FN0 , LEFT,DOWN,RGHT),
 
     /* Layer 1: HHKB mode (HHKB Fn)
