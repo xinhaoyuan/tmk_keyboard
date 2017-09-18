@@ -1,4 +1,4 @@
-/* 
+/*
  * HHKB JP Layout
  *
  * make -f Makefile.jp KEYMAP=jp_xinhao, then flush hhkb_lufa.hex
@@ -53,12 +53,12 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
      * |   ||   |   |   |   |         |   |   |   |   ||McL|McD|McR|
      * `-----------------------------------------------------------'
      */
-    [2] = 
+    [2] =
     KEYMAP_JP(TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,\
               TRNS  ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,        \
               TRNS   ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,WH_U,BTN3,TRNS,  \
               TRNS    ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,BTN1,WH_D,MS_U,BTN2, \
-              TRNS,TRNS,TRNS,TRNS,TRNS,    TRNS    ,TRNS,TRNS,TRNS,TRNS ,MS_L,MS_D,MS_R),    
+              TRNS,TRNS,TRNS,TRNS,TRNS,    TRNS    ,TRNS,TRNS,TRNS,TRNS ,MS_L,MS_D,MS_R),
     /* Layer 3: Extra Modifiers
      * ,-----------------------------------------------------------.
      * |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
@@ -72,12 +72,12 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
      * |   ||   |   |   |FN3|         |FN4|FN5|   |   ||   |   |   |
      * `-----------------------------------------------------------'
      */
-    [3] = 
+    [3] =
     KEYMAP_JP(TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,\
               TRNS  ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,        \
               TRNS   ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  \
               TRNS    ,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
-              TRNS,TRNS,TRNS,TRNS,FN3 ,    TRNS    ,FN4 ,FN5 ,TRNS,TRNS ,TRNS,TRNS,TRNS),    
+              TRNS,TRNS,TRNS,TRNS,FN3 ,    TRNS    ,FN4 ,FN5 ,TRNS,TRNS ,TRNS,TRNS,TRNS),
     /* Layer 31: Function selecting mode
      * ,-----------------------------------------------------------.
      * |   | MK| DK|   |   |   |   |   |   |   |   |   |   |   |   |
@@ -91,12 +91,12 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
      * |   ||   |   |   |   |         |   |   |   |   ||   |   |   |
      * `-----------------------------------------------------------'
      */
-    [31] = 
+    [31] =
     KEYMAP_JP(NO  ,FN1 ,FN2 ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,\
               NO    ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,        \
               NO     ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,  \
               NO      ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  , \
-              NO  ,TRNS,NO  ,NO  ,NO  ,    NO      ,NO  ,NO  ,NO  ,NO   ,NO  ,NO  ,NO  ),    
+              NO  ,TRNS,NO  ,NO  ,NO  ,    NO      ,NO  ,NO  ,NO  ,NO   ,NO  ,NO  ,NO  ),
 };
 
 
@@ -105,9 +105,9 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
  * Fn action definition
  */
 #ifdef KEYMAP_SECTION_ENABLE
-const uint16_t fn_actions[] __attribute__ ((section (".keymap.fn_actions"))) = {
+const action_t fn_actions[] __attribute__ ((section (".keymap.fn_actions"))) = {
 #else
-const uint16_t fn_actions[] PROGMEM = {
+const action_t fn_actions[] PROGMEM = {
 #endif
     [0] = ACTION_LAYER_MOMENTARY(1),
     [1] = ACTION_LAYER_INVERT(2, ON_PRESS),
